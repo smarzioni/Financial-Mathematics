@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{67F5A938-D3C8-476F-88B8-5B4940826ACC}</ProjectGuid>
+    <ProjectGuid>{A1EFEEDA-2376-4B29-8652-5334B85F93BB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>TextbookMaterial</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
@@ -77,7 +77,6 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -147,15 +146,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="PayOff1.h" />
+    <ClInclude Include="DoubleDigital.h" />
+    <ClInclude Include="PayOff2.h" />
     <ClInclude Include="Random1.h" />
-    <ClInclude Include="SimpleMC.h" />
+    <ClInclude Include="SimpleMC2.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PayOff1.cpp" />
+    <ClCompile Include="DoubleDigital.cpp" />
+    <ClCompile Include="PayOff2.cpp" />
     <ClCompile Include="Random1.cpp" />
-    <ClCompile Include="SimpleMC.cpp" />
-    <ClCompile Include="SimpleMCMain2.cpp" />
+    <ClCompile Include="SimpleMC2.cpp" />
+    <ClCompile Include="SimpleMCMain5.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

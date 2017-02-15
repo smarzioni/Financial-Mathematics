@@ -1,6 +1,6 @@
 //Taken from Joshi's C++ Desig Patterns...
 
-#include "PayOff1.h"
+#include  "PayOff1.h"
 #include <minmax.h>
 
 PayOff::PayOff(double Strike_, OptionType TheOptionType_)
