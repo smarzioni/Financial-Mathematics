@@ -36,10 +36,10 @@
     <ClCompile Include="Vanilla3.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="VanillaMain4.cpp">
+    <ClCompile Include="PiecewiseParameters.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="PiecewiseParameters.cpp">
+    <ClCompile Include="PieceWiseTestMain.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
   </ItemGroup>

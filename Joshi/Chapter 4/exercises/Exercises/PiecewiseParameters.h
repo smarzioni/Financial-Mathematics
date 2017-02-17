@@ -10,7 +10,7 @@
 class ParametersPieceWise : public ParametersInner
 {
 public:
-	ParametersPieceWise(int n,  double constant[],  double times[]);
+	ParametersPieceWise(std::vector<double> constant, std::vector<double> times);
 
 	virtual ParametersInner* clone() const;
 	virtual double Integral(double time1, double time2) const;

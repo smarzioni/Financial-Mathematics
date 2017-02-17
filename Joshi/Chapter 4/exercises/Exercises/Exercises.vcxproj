@@ -151,10 +151,10 @@
     <ClCompile Include="PayOff3.cpp" />
     <ClCompile Include="PayOffBridge.cpp" />
     <ClCompile Include="PiecewiseParameters.cpp" />
+    <ClCompile Include="PieceWiseTestMain.cpp" />
     <ClCompile Include="Random1.cpp" />
     <ClCompile Include="SimpleMC6.cpp" />
     <ClCompile Include="Vanilla3.cpp" />
-    <ClCompile Include="VanillaMain4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DoubleDigital2.h" />
