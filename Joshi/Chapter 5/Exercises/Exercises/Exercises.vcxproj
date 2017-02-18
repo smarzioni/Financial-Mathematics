@@ -162,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConvergenceTable.h" />
+    <ClInclude Include="CountedWrapper.h" />
     <ClInclude Include="ExerciseStats.h" />
     <ClInclude Include="MCStatistics.h" />
     <ClInclude Include="Parameters.h" />

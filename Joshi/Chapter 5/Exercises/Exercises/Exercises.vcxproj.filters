@@ -95,5 +95,8 @@
     <ClInclude Include="SimpleMCTerm.h">
       <Filter>File di origine</Filter>
     </ClInclude>
+    <ClInclude Include="CountedWrapper.h">
+      <Filter>File di origine</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
