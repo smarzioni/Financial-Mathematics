@@ -1,5 +1,6 @@
 
 #include "Halton.h"
+#include "BaseChanges.h"
 #include <vector>
 #include <cmath>
 #include <algorithm>
@@ -12,92 +13,6 @@ const unsigned primes[95] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43,
 	281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397,
 	401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499 };
 
-//The following method computes the coefficients of k in base b and puts them into a vector
-// {1, 5} == BaseExpansion(15, 10)
-vector<unsigned int> BaseExpansion(unsigned int k, unsigned int b)
-{
-	int sign = 1;
-	if (k == 0)
-	{
-		vector<unsigned int> Expansion(1);
-		Expansion[0] = 0;
-		return Expansion;
-	}
-
-	unsigned int maxPower = (log(k) / log(b));
-	vector<unsigned int> Expansion(maxPower + 1);
-
-	int q = pow(b, maxPower);
-	for (int j = 0; j < Expansion.size(); j++)
-	{
-		Expansion[j] = k / q;
-		k -= q * Expansion[j];
-		q /= b;
-	}
-	return Expansion;
-}
-
-//The following function reconstructs an integer from its expansion in base b
-int DecimalInteger(vector<unsigned int> expansion, unsigned int b)
-{
-	int k = 0;
-	int q = 1;
-	for (int j = expansion.size() - 1; j >= 0; j--)
-	{
-		k += q*expansion[j];
-		q *= b;
-	}
-	return k;
-}
-
-//The following method return the expansion in base b of the integer following the integer A
-// which is stored in the form of base b-expansion inside the vector expansion;
-vector<unsigned int> NextBaseExpansion(vector<unsigned int> expansion, unsigned int b)
-{
-	int preSize = expansion.size();
-	vector<unsigned int> NextExpansion;
-	bool Remainding = true;
-	for (int j = preSize - 1; j >= 0; j--)
-	{
-		if (Remainding)
-		{
-			if (expansion[j] == b - 1)
-			{
-				NextExpansion.push_back(0);
-			}
-			else
-			{
-				NextExpansion.push_back(expansion[j] + 1);
-				Remainding = false;
-			}
-		}
-		else 
-		{
-			NextExpansion.push_back(expansion[j]);
-		}
-	}
-
-	if (Remainding) NextExpansion.push_back(1);
-	reverse(NextExpansion.begin(), NextExpansion.end());
-
-	return NextExpansion;
-}
-
-//The following function computes the Van der Corpurt number in (0,1) corresponding to the 
-// base b expansion of an integer as stored in the vector expansion;
-double VanDerCorput(vector<unsigned int> expansion, int b)
-{
-	double x = 0;
-	double q = 1 / b;
-	int m = expansion.size();
-	for (int j = 0; j < m; j++)
-	{
-		x += expansion[m - j - 1] * q;
-		q /= b;
-	}
-	return x;
-}
-
 
 Halton::Halton(unsigned int dimension_, unsigned long seed_) : dimension(dimension_), Seed(seed_)
 {
@@ -106,9 +21,14 @@ Halton::Halton(unsigned int dimension_, unsigned long seed_) : dimension(dimensi
 
 	if (dimension > 95)
 		throw("\nOnly dimensions <= 95 are accepted by Halton.h\n");
-	for (int i = 0; i < dimension; i++)
+	Basis.resize(dimension);
+	SeedExpansions.resize(dimension);
+	for (unsigned int i = 0; i < dimension; i++)
 	{
 		Basis[i] = primes[i];
+		int p = log(Seed) / log(Basis[i]);
+		SeedExpansions[i].resize(p + 1);
+		SeedExpansions[i] = BaseExpansion(Seed, Basis[i]);
 	}
 }
 
@@ -117,34 +37,47 @@ void Halton::SetSeed(unsigned long Seed_)
 	Seed = Seed_;
 	if (Seed == 0)
 		Seed = 1;
+	for (unsigned int i = 0; i < dimension; i++)
+	{
+		int p = log(Seed) / log(Basis[i]);
+		SeedExpansions[i].resize(p + 1);
+		SeedExpansions[i] = BaseExpansion(Seed, Basis[i]);
+	}
 }
 
 void Halton::SetDimension(unsigned int dim)
 {
 	dimension = dim;
 	Seed = 1;
+	Basis.resize(dimension);
+	SeedExpansions.resize(dimension);
+	for (unsigned int i = 0; i < dimension; i++)
+	{
+		Basis[i] = primes[i];
+		int p = log(Seed) / log(Basis[i]);
+		SeedExpansions[i].resize(p + 1);
+		SeedExpansions[i] = BaseExpansion(Seed, Basis[i]);
+	}
 }
 
-vector<vector<double>> Halton::GetNextHaltonPoints(int size)
+vector<vector<double>> Halton::GetNextHaltonPoints(unsigned int size)
 {
 	vector <vector<double>> sequence(size);
-	vector<unsigned int> expansions;
-	int k = Seed;
+	int k = 0;
 
-	while (k < Seed + size)
+	while (k < size)
 	{
-		sequence[k - Seed].resize(dimension);
+		sequence[k].resize(dimension);
 
 		for (int i = 0; i < dimension; i++)
 		{
-			expansions = BaseExpansion(k, Basis[i]);
-			sequence[k - Seed][i] = VanDerCorput(expansions, Basis[i]);
+			sequence[k][i] = VanDerCorput(SeedExpansions[i], Basis[i]);
+			SeedExpansions[i] = NextBaseExpansion(SeedExpansions[i], Basis[i]);
 		}
-
 		k++;
 	}
-
 	Seed = Seed + size;
+	return sequence;
 }
 
 void Halton::Reset(unsigned int dimension_, unsigned long seed_)
@@ -157,9 +90,15 @@ void Halton::Reset(unsigned int dimension_, unsigned long seed_)
 
 	if (dimension > 95)
 		throw("\nOnly dimensions <= 95 are accepted by Halton.h\n");
-	for (int i = 0; i < dimension; i++)
+	
+	Basis.resize(dimension);
+	SeedExpansions.resize(dimension);
+	for (unsigned int i = 0; i < dimension; i++)
 	{
 		Basis[i] = primes[i];
+		int p = log(Seed) / log(Basis[i]);
+		SeedExpansions[i].resize(p + 1);
+		SeedExpansions[i] = BaseExpansion(Seed, Basis[i]);
 	}
 }
 

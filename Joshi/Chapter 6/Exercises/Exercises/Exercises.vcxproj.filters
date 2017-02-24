@@ -14,4 +14,104 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Textbook material\Textbook material\AntiThetic.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Textbook material\Textbook material\Arrays.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Textbook material\Textbook material\ConvergenceTable.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Textbook material\Textbook material\DoubleDigital2.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Textbook material\Textbook material\MCStatistics.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Textbook material\Textbook material\Normals.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Textbook material\Textbook material\Parameters.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Textbook material\Textbook material\ParkMiller.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Textbook material\Textbook material\PayOff3.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Textbook material\Textbook material\PayOffBridge.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Textbook material\Textbook material\Random2.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Textbook material\Textbook material\SimpleMC8.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Textbook material\Textbook material\Vanilla3.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="Halton.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseChanges.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise6.3main.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Textbook material\Textbook material\AntiThetic.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Textbook material\Textbook material\Arrays.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Textbook material\Textbook material\ConvergenceTable.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Textbook material\Textbook material\DoubleDigital2.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Textbook material\Textbook material\MCStatistics.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Textbook material\Textbook material\Normals.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Textbook material\Textbook material\Parameters.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Textbook material\Textbook material\ParkMiller.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Textbook material\Textbook material\PayOff3.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Textbook material\Textbook material\PayOffBridge.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Textbook material\Textbook material\Random2.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Textbook material\Textbook material\SimpleMC8.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Textbook material\Textbook material\Vanilla3.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Textbook material\Textbook material\Wrapper.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="Halton.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseChanges.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

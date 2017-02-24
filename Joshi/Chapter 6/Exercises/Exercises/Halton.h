@@ -15,7 +15,7 @@ class Halton
 public:
 	Halton(unsigned int dimension, unsigned long seed = 1);
 
-	std::vector<std::vector<double>> GetNextHaltonPoints(int size);
+	std::vector<std::vector<double>> GetNextHaltonPoints(unsigned int size);
 	//Return Halton points points under in a vector of dimensions vector [size][dimension] 
 	void SetSeed(unsigned long Seed);
 	void SetDimension(unsigned int dim);
@@ -25,9 +25,15 @@ private:
 	unsigned long Seed;
 	unsigned int dimension;
 	std::vector<unsigned int> Basis;
-
+	std::vector<std::vector<unsigned int>> SeedExpansions;
+	//The vector basis store the first dimension prime number.
+	//the vector SeedExpansions is of length dimension and contains integer vectors 
+	// corresponding to the expansion of Seed in basis prime number of the same index
 };
 
+
+//LowDiscrepancyHalton Inherits from RandomBase and it can be used with the rest of the code 
+// from monte carlo simulations to make a quasi-monte carlo simulator with Halton sequence 
 class LowDiscrepancyHalton : public RandomBase
 {
 public:

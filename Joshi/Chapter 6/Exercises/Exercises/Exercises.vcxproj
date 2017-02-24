@@ -146,6 +146,40 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Textbook material\Textbook material\AntiThetic.cpp" />
+    <ClCompile Include="..\..\Textbook material\Textbook material\Arrays.cpp" />
+    <ClCompile Include="..\..\Textbook material\Textbook material\ConvergenceTable.cpp" />
+    <ClCompile Include="..\..\Textbook material\Textbook material\DoubleDigital2.cpp" />
+    <ClCompile Include="..\..\Textbook material\Textbook material\MCStatistics.cpp" />
+    <ClCompile Include="..\..\Textbook material\Textbook material\Normals.cpp" />
+    <ClCompile Include="..\..\Textbook material\Textbook material\Parameters.cpp" />
+    <ClCompile Include="..\..\Textbook material\Textbook material\ParkMiller.cpp" />
+    <ClCompile Include="..\..\Textbook material\Textbook material\PayOff3.cpp" />
+    <ClCompile Include="..\..\Textbook material\Textbook material\PayOffBridge.cpp" />
+    <ClCompile Include="..\..\Textbook material\Textbook material\Random2.cpp" />
+    <ClCompile Include="..\..\Textbook material\Textbook material\SimpleMC8.cpp" />
+    <ClCompile Include="..\..\Textbook material\Textbook material\Vanilla3.cpp" />
+    <ClCompile Include="BaseChanges.cpp" />
+    <ClCompile Include="Exercise6.3main.cpp" />
+    <ClCompile Include="Halton.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Textbook material\Textbook material\AntiThetic.h" />
+    <ClInclude Include="..\..\Textbook material\Textbook material\Arrays.h" />
+    <ClInclude Include="..\..\Textbook material\Textbook material\ConvergenceTable.h" />
+    <ClInclude Include="..\..\Textbook material\Textbook material\DoubleDigital2.h" />
+    <ClInclude Include="..\..\Textbook material\Textbook material\MCStatistics.h" />
+    <ClInclude Include="..\..\Textbook material\Textbook material\Normals.h" />
+    <ClInclude Include="..\..\Textbook material\Textbook material\Parameters.h" />
+    <ClInclude Include="..\..\Textbook material\Textbook material\ParkMiller.h" />
+    <ClInclude Include="..\..\Textbook material\Textbook material\PayOff3.h" />
+    <ClInclude Include="..\..\Textbook material\Textbook material\PayOffBridge.h" />
+    <ClInclude Include="..\..\Textbook material\Textbook material\Random2.h" />
+    <ClInclude Include="..\..\Textbook material\Textbook material\SimpleMC8.h" />
+    <ClInclude Include="..\..\Textbook material\Textbook material\Vanilla3.h" />
+    <ClInclude Include="..\..\Textbook material\Textbook material\Wrapper.h" />
+    <ClInclude Include="BaseChanges.h" />
+    <ClInclude Include="Halton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

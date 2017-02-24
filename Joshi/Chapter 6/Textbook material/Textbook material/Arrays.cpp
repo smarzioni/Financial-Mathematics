@@ -1,4 +1,4 @@
-
+#pragma warning (disable : 4996)
 #include "Arrays.h"
 #include <algorithm>
 #include <numeric>
