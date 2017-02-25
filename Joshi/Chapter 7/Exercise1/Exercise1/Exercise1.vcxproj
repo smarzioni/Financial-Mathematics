@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8E954E53-BE6F-42FF-A709-1D25621EF8FC}</ProjectGuid>
+    <ProjectGuid>{5CCFD4F7-EAB0-4A05-A32D-B624AFC5AA7C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Arrays</RootNamespace>
+    <RootNamespace>Exercise1</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -146,11 +146,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Arrays.h" />
+    <ClCompile Include="..\..\..\Appendices\Arrays\Arrays\Arrays.cpp" />
+    <ClCompile Include="..\..\TextBook material\TextBook material\AntiThetic.cpp" />
+    <ClCompile Include="..\..\TextBook material\TextBook material\ConvergenceTable.cpp" />
+    <ClCompile Include="..\..\TextBook material\TextBook material\ExoticBSEngine.cpp" />
+    <ClCompile Include="..\..\TextBook material\TextBook material\ExoticEngine.cpp" />
+    <ClCompile Include="..\..\TextBook material\TextBook material\MCStatistics.cpp" />
+    <ClCompile Include="..\..\TextBook material\TextBook material\Normals.cpp" />
+    <ClCompile Include="..\..\TextBook material\TextBook material\Parameters.cpp" />
+    <ClCompile Include="..\..\TextBook material\TextBook material\ParkMiller.cpp" />
+    <ClCompile Include="..\..\TextBook material\TextBook material\PathDependent.cpp" />
+    <ClCompile Include="..\..\TextBook material\TextBook material\PathDependentAsian.cpp" />
+    <ClCompile Include="..\..\TextBook material\TextBook material\PayOff3.cpp" />
+    <ClCompile Include="..\..\TextBook material\TextBook material\PayOffBridge.cpp" />
+    <ClCompile Include="..\..\TextBook material\TextBook material\Random2.cpp" />
+    <ClCompile Include="Ex1Main.cpp" />
+    <ClCompile Include="GeometricAsian.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Arrays.cpp" />
-    <ClCompile Include="TestMain.cpp" />
+    <ClInclude Include="..\..\..\Appendices\Arrays\Arrays\Arrays.h" />
+    <ClInclude Include="..\..\TextBook material\TextBook material\AntiThetic.h" />
+    <ClInclude Include="..\..\TextBook material\TextBook material\ConvergenceTable.h" />
+    <ClInclude Include="..\..\TextBook material\TextBook material\ExoticBSEngine.h" />
+    <ClInclude Include="..\..\TextBook material\TextBook material\ExoticEngine.h" />
+    <ClInclude Include="..\..\TextBook material\TextBook material\MCStatistics.h" />
+    <ClInclude Include="..\..\TextBook material\TextBook material\Normals.h" />
+    <ClInclude Include="..\..\TextBook material\TextBook material\Parameters.h" />
+    <ClInclude Include="..\..\TextBook material\TextBook material\ParkMiller.h" />
+    <ClInclude Include="..\..\TextBook material\TextBook material\PathDependent.h" />
+    <ClInclude Include="..\..\TextBook material\TextBook material\PathDependentAsian.h" />
+    <ClInclude Include="..\..\TextBook material\TextBook material\PayOff3.h" />
+    <ClInclude Include="..\..\TextBook material\TextBook material\PayOffBridge.h" />
+    <ClInclude Include="..\..\TextBook material\TextBook material\Random2.h" />
+    <ClInclude Include="GeometricAsian.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

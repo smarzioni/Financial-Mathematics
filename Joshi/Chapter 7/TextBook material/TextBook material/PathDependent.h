@@ -1,7 +1,7 @@
 #ifndef PATH_DEPENDENT_H
 #define PATH_DEPENDENT_H
 
-#include "Arrays.h"
+#include "..\..\..\Appendices\Arrays\Arrays\Arrays.h"
 #include <vector>
 
 class CashFlow

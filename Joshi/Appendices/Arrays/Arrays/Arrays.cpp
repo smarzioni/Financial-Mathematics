@@ -170,6 +170,11 @@ double MJArray::sum() const
 	return std::accumulate(ValuesPtr, EndPtr, 0.0);
 }
 
+double MJArray::prod() const
+{
+	return std::accumulate(ValuesPtr, EndPtr, 1.0, std::multiplies<double>());
+}
+
 double MJArray::min() const
 {
 #ifdef RANGE_CHECKING

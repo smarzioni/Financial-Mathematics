@@ -50,6 +50,7 @@ public:
 	double sum() const;
 	double min() const;
 	double max() const;
+	double prod() const;
 
 private:
 	double* ValuesPtr;

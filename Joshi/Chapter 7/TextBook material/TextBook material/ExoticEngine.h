@@ -28,5 +28,5 @@ private:
 
 // A mutable data memeber in an object can be changed by const methods of the object.
 // Here it is used because we do not want to initialize new vectors of cash flow all the times.
-// Initialize a vector is dynamic allocation and requires a lot of time. Doing it onece far all could
+// Initialize a vector is dynamic allocation and requires a lot of time. Doing it once far all could
 // be a good idea.
