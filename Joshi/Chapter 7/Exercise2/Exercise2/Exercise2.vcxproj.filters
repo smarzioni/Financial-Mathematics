@@ -63,6 +63,9 @@
     <ClCompile Include="..\..\..\Appendices\Arrays\Arrays\Arrays.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
+    <ClCompile Include="OptionDifference.cpp">
+      <Filter>File di intestazione</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\TextBook material\TextBook material\AntiThetic.h">
@@ -111,6 +114,9 @@
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Appendices\Arrays\Arrays\Arrays.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionDifference.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
   </ItemGroup>

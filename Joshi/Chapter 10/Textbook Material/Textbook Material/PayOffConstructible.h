@@ -8,6 +8,7 @@
 #include "PayOffFactory.h"
 
 //class T is required to have a constructor T::T(double)
+// and a defined T::operator()(double)
 
 //Typical use PayOffHelper<PayOffCall> Call("call") 
 // creates  a couple <"call", PayOff* Call(double Strike)> into the map stored in the 
