@@ -1,5 +1,5 @@
 #include "BlackScholesFormulas.h"
-#include "Normals.h"
+#include "..\..\..\Normals\Normals\Normals.h"
 #include <cmath>
 
 using namespace std;

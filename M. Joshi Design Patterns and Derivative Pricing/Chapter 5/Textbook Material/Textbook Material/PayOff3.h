@@ -3,11 +3,6 @@
 #ifndef PAYOFF3_H
 #define PAYOFF3_H
 
-/*
- The Base Class PayOff is used as a function object via the overloaded operator(double Spot) to return 
- the pay off given the Spot price. As different types of payoffs exist, we will have 
- different derived classes from PayOff.
-*/
 class PayOff
 {
 public:

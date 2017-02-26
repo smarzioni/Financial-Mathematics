@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D4CC6760-43C9-4C0C-9221-7D152C4075D5}</ProjectGuid>
+    <ProjectGuid>{5B60D981-77D2-4749-B33E-6DB5ED1DCD4E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>FinalBuild</RootNamespace>
+    <RootNamespace>BSFormulas</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -146,56 +146,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AntiThetic.cpp" />
-    <ClCompile Include="Arrays.cpp" />
-    <ClCompile Include="BlackScholesFormulas.cpp" />
-    <ClCompile Include="ConvergenceTable.cpp" />
-    <ClCompile Include="DiscreteKnockDownOut.cpp" />
-    <ClCompile Include="DiscreteKnockUpOut.cpp" />
-    <ClCompile Include="DoubleDigital2.cpp" />
-    <ClCompile Include="EquityFXMain.cpp" />
-    <ClCompile Include="ExoticBSEngine.cpp" />
-    <ClCompile Include="ExoticEngine.cpp" />
-    <ClCompile Include="GeometricAsian.cpp" />
-    <ClCompile Include="MCStatistics.cpp" />
-    <ClCompile Include="Normals.cpp" />
-    <ClCompile Include="Parameters.cpp" />
-    <ClCompile Include="ParkMiller.cpp" />
-    <ClCompile Include="PathDependent.cpp" />
-    <ClCompile Include="PathDependentAsian.cpp" />
-    <ClCompile Include="PayOff3.cpp" />
-    <ClCompile Include="PayOffBridge.cpp" />
-    <ClCompile Include="PiecewiseParameters.cpp" />
-    <ClCompile Include="Random2.cpp" />
-    <ClCompile Include="SeveralStatistics.cpp" />
-    <ClCompile Include="Terminator.cpp" />
-    <ClCompile Include="VanillaPathDependent.cpp" />
+    <ClInclude Include="..\..\..\Normals\Normals\Normals.h" />
+    <ClInclude Include="BlackScholesFormulas.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AntiThetic.h" />
-    <ClInclude Include="Arrays.h" />
-    <ClInclude Include="BlackScholesFormulas.h" />
-    <ClInclude Include="ConvergenceTable.h" />
-    <ClInclude Include="DiscreteKnockDownOut.h" />
-    <ClInclude Include="DiscreteKnockUpOut.h" />
-    <ClInclude Include="DoubleDigital2.h" />
-    <ClInclude Include="ExoticBSEngine.h" />
-    <ClInclude Include="ExoticEngine.h" />
-    <ClInclude Include="GeometricAsian.h" />
-    <ClInclude Include="MCStatistics.h" />
-    <ClInclude Include="Normals.h" />
-    <ClInclude Include="Parameters.h" />
-    <ClInclude Include="ParkMiller.h" />
-    <ClInclude Include="PathDependent.h" />
-    <ClInclude Include="PathDependentAsian.h" />
-    <ClInclude Include="PayOff3.h" />
-    <ClInclude Include="PayOffBridge.h" />
-    <ClInclude Include="PiecewiseParameters.h" />
-    <ClInclude Include="Random2.h" />
-    <ClInclude Include="SeveralStatistics.h" />
-    <ClInclude Include="Terminator.h" />
-    <ClInclude Include="VanillaPathDependent.h" />
-    <ClInclude Include="Wrapper.h" />
+    <ClCompile Include="..\..\..\Normals\Normals\Normals.cpp" />
+    <ClCompile Include="BlackScholesFormulas.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
