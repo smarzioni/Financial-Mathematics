@@ -25,7 +25,7 @@
       <Filter>File di origine</Filter>
     </ClCompile>
     <ClCompile Include="MJmatrices.cpp">
-      <Filter>File di intestazione</Filter>
+      <Filter>File di origine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +42,12 @@
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="MJmatrices.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="ArgListFactory.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="ArgListFactoryHelper.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
   </ItemGroup>

@@ -153,6 +153,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArgList.h" />
+    <ClInclude Include="ArgListFactory.h" />
+    <ClInclude Include="ArgListFactoryHelper.h" />
     <ClInclude Include="CellMatrix.h" />
     <ClInclude Include="MJmatrices.h" />
     <ClInclude Include="MyContainers.h" />
