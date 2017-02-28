@@ -36,9 +36,6 @@
     <ClCompile Include="DoubleDigital2.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="EquityFXMain.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
     <ClCompile Include="ExoticBSEngine.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
@@ -85,6 +82,12 @@
       <Filter>File di origine</Filter>
     </ClCompile>
     <ClCompile Include="PiecewiseParameters.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="ArgumentList.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="MAIN_SecurityPricingTest.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
   </ItemGroup>
@@ -159,6 +162,9 @@
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="Terminator.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="ArgumentList.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
   </ItemGroup>

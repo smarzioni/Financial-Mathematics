@@ -147,16 +147,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AntiThetic.cpp" />
+    <ClCompile Include="ArgumentList.cpp" />
     <ClCompile Include="Arrays.cpp" />
     <ClCompile Include="BlackScholesFormulas.cpp" />
     <ClCompile Include="ConvergenceTable.cpp" />
     <ClCompile Include="DiscreteKnockDownOut.cpp" />
     <ClCompile Include="DiscreteKnockUpOut.cpp" />
     <ClCompile Include="DoubleDigital2.cpp" />
-    <ClCompile Include="EquityFXMain.cpp" />
     <ClCompile Include="ExoticBSEngine.cpp" />
     <ClCompile Include="ExoticEngine.cpp" />
     <ClCompile Include="GeometricAsian.cpp" />
+    <ClCompile Include="MAIN_SecurityPricingTest.cpp" />
     <ClCompile Include="MCStatistics.cpp" />
     <ClCompile Include="Normals.cpp" />
     <ClCompile Include="Parameters.cpp" />
@@ -173,6 +174,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AntiThetic.h" />
+    <ClInclude Include="ArgumentList.h" />
     <ClInclude Include="Arrays.h" />
     <ClInclude Include="BlackScholesFormulas.h" />
     <ClInclude Include="ConvergenceTable.h" />
