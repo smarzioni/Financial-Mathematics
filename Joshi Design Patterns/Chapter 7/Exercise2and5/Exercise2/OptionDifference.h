@@ -3,7 +3,8 @@
 
 #include "..\..\TextBook material\TextBook material\PathDependent.h"
 #include "..\..\TextBook material\TextBook material\PayOffBridge.h"
-#include "..\..\TextBook material\TextBook material\Wrapper.h"
+#include "..\..\TextBook material\TextBook material\Wrapper.h" 
+#include <vector>
 
 /* The Class OptionDifference is defined by two path-dependent options and pays the difference in 
 	PayOff of Option1 minus Option2.
@@ -22,5 +23,10 @@ public:
 private:
 	Wrapper<PathDependent> Option1;
 	Wrapper<PathDependent> Option2;
+	/* TimeIndex1 and 2 converts the TimeIndex arguments of the cashFlows of option1 (and 2)
+	 to the TimeIndex of the Corresponding CashFlow at ofOptionDifference*/
+	std::vector<unsigned long> TimeIndex1;
+	std::vector<unsigned long> TimeIndex2;
+	MJArray PossibleCashFlow;
 };
 #endif // !OPTION_DIFFERENCE_H
