@@ -77,7 +77,10 @@ const std::vector<std::pair<std::string, ArgumentList::ArgType>>& ArgumentList::
 }
 
 //constructor
-ArgumentList::ArgumentList(std::string ListName_) : ListName(ListName_) {}
+ArgumentList::ArgumentList(std::string ListName_)  
+{
+	ListName = MakeLowerCase(ListName_);
+}
 
 //Add methods definition
 

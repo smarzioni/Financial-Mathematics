@@ -153,19 +153,18 @@
     <ClCompile Include="ConvergenceTable.cpp" />
     <ClCompile Include="DiscreteKnockDownOut.cpp" />
     <ClCompile Include="DiscreteKnockUpOut.cpp" />
-    <ClCompile Include="DoubleDigital2.cpp" />
     <ClCompile Include="ExoticBSEngine.cpp" />
     <ClCompile Include="ExoticEngine.cpp" />
     <ClCompile Include="GeometricAsian.cpp" />
-    <ClCompile Include="MAIN_testArgList.cpp" />
+    <ClCompile Include="MAIN_test_factory.cpp" />
     <ClCompile Include="MCStatistics.cpp" />
     <ClCompile Include="Normals.cpp" />
     <ClCompile Include="Parameters.cpp" />
     <ClCompile Include="ParkMiller.cpp" />
     <ClCompile Include="PathDependent.cpp" />
     <ClCompile Include="PathDependentAsian.cpp" />
-    <ClCompile Include="PayOff3.cpp" />
-    <ClCompile Include="PayOffBridge.cpp" />
+    <ClCompile Include="PayOff.cpp" />
+    <ClCompile Include="FactoryRegistrations.cpp" />
     <ClCompile Include="PiecewiseParameters.cpp" />
     <ClCompile Include="Random2.cpp" />
     <ClCompile Include="SeveralStatistics.cpp" />
@@ -174,13 +173,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AntiThetic.h" />
+    <ClInclude Include="ArgListFactory.h" />
+    <ClInclude Include="ArgListFactoryHelper.h" />
     <ClInclude Include="ArgumentList.h" />
     <ClInclude Include="Arrays.h" />
     <ClInclude Include="BlackScholesFormulas.h" />
     <ClInclude Include="ConvergenceTable.h" />
     <ClInclude Include="DiscreteKnockDownOut.h" />
     <ClInclude Include="DiscreteKnockUpOut.h" />
-    <ClInclude Include="DoubleDigital2.h" />
     <ClInclude Include="ExoticBSEngine.h" />
     <ClInclude Include="ExoticEngine.h" />
     <ClInclude Include="GeometricAsian.h" />
@@ -190,8 +190,8 @@
     <ClInclude Include="ParkMiller.h" />
     <ClInclude Include="PathDependent.h" />
     <ClInclude Include="PathDependentAsian.h" />
+    <ClInclude Include="PayOff.h" />
     <ClInclude Include="PayOff3.h" />
-    <ClInclude Include="PayOffBridge.h" />
     <ClInclude Include="PiecewiseParameters.h" />
     <ClInclude Include="Random2.h" />
     <ClInclude Include="SeveralStatistics.h" />

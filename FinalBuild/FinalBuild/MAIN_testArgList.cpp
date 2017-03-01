@@ -13,9 +13,10 @@ int main()
 	MJArray mja(1);
 	mja[0] = 89.3;
 	ArgumentList Lista("Prova");
+	string value = "valore";
 
 	//add elements to Lista;
-	Lista.add("stringa", static_cast<std::string>("valoree"));
+	Lista.add("stringa", value);
 	Lista.add("Integer", -45);
 	Lista.add("Integer2", 80);
 	Lista.add("Float", 0.045);

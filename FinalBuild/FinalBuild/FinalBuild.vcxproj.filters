@@ -33,9 +33,6 @@
     <ClCompile Include="DiscreteKnockUpOut.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="DoubleDigital2.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
     <ClCompile Include="ExoticBSEngine.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
@@ -63,12 +60,6 @@
     <ClCompile Include="PathDependentAsian.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="PayOff3.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
-    <ClCompile Include="PayOffBridge.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
     <ClCompile Include="Random2.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
@@ -87,7 +78,13 @@
     <ClCompile Include="ArgumentList.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="MAIN_testArgList.cpp">
+    <ClCompile Include="PayOff.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="MAIN_test_factory.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="FactoryRegistrations.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
   </ItemGroup>
@@ -108,9 +105,6 @@
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="DiscreteKnockUpOut.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="DoubleDigital2.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="ExoticBSEngine.h">
@@ -143,9 +137,6 @@
     <ClInclude Include="PayOff3.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
-    <ClInclude Include="PayOffBridge.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
     <ClInclude Include="Random2.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
@@ -165,6 +156,15 @@
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="ArgumentList.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="ArgListFactory.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="ArgListFactoryHelper.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="PayOff.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
   </ItemGroup>
