@@ -87,7 +87,7 @@
     <ClCompile Include="ArgumentList.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="MAIN_SecurityPricingTest.cpp">
+    <ClCompile Include="MAIN_testArgList.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
   </ItemGroup>

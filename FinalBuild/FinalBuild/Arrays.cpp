@@ -2,6 +2,8 @@
 #include <algorithm>
 #include <numeric>
 
+#pragma warning(disable : 4996)
+
 MJArray::MJArray(unsigned long size) : Size(size), Capacity(size)
 {
 	if (Size > 0)

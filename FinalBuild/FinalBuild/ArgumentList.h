@@ -81,13 +81,13 @@ private:
 	std::map<std::string, ArgType> Names;
 
 	//Binary trees of arguments stored by type, ordered by name
+	std::map<std::string, ArgumentList> listArguments;
 	std::map<std::string, std::string> stringArguments;
 	std::map<std::string, int> integerArguments;
 	std::map<std::string, double> floatingArguments;
 	std::map<std::string, bool> booleanArguments;
 	std::map<std::string, std::vector<double>> vectorDoubleArguments;
 	std::map<std::string, MJArray> mjarrayArguments;
-	std::map<std::string, ArgumentList> listArguments;
 };
 
 

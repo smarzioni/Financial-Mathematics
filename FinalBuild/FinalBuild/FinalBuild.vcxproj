@@ -157,7 +157,7 @@
     <ClCompile Include="ExoticBSEngine.cpp" />
     <ClCompile Include="ExoticEngine.cpp" />
     <ClCompile Include="GeometricAsian.cpp" />
-    <ClCompile Include="MAIN_SecurityPricingTest.cpp" />
+    <ClCompile Include="MAIN_testArgList.cpp" />
     <ClCompile Include="MCStatistics.cpp" />
     <ClCompile Include="Normals.cpp" />
     <ClCompile Include="Parameters.cpp" />

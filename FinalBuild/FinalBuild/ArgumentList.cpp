@@ -1,5 +1,9 @@
 #include "ArgumentList.h"
 #include <algorithm>
+//DEBUG
+//#include <iostream>
+
+#pragma warning (disable : 4996)
 
 //Utilities Definition
 
@@ -36,6 +40,11 @@ void ArgumentList::MarkUsedArgument(const std::string& ArgumentName)
 bool ArgumentList::isPresent(const std::string& ArgumentName) const
 {
 	std::string name = MakeLowerCase(ArgumentName);
+
+	//DEBUG
+	//std::map<std::string, ArgumentList::ArgType>::const_iterator it = Names.find(name);
+	//std::cout << "\nDEBUG: found Arg Name " << name << "with Type " << it->second;
+
 	return (Names.find(name) != Names.end());
 }
 
@@ -74,7 +83,17 @@ ArgumentList::ArgumentList(std::string ListName_) : ListName(ListName_) {}
 
 void ArgumentList::add(const std::string& name, const std::string& value)
 {
+	//DEBUG
+	//std::cout << "add (const string& " << name << ", const string " << value <<
+	//	"  ) called \n";
+
 	std::string Lname = MakeLowerCase(name);
+	
+	//DEBUG:
+	//std::pair<std::string, std::string> toInsert = std::make_pair(Lname, value);
+	//std::cout << "\nDEBUG: inserting pair " << toInsert.first << " , " << toInsert.second << "\n";
+	//stringArguments.insert(toInsert);
+	
 	stringArguments.insert(std::make_pair(Lname, value));
 
 	ArgType type = string;
@@ -84,6 +103,10 @@ void ArgumentList::add(const std::string& name, const std::string& value)
 void ArgumentList::add(const std::string& name, const int& value)
 {
 	std::string Lname = MakeLowerCase(name);
+	//DEBUG:
+	//std::pair<std::string, int> toInsert = std::make_pair(Lname, value);
+	//std::cout << "\nDEBUG: inserting pair " << toInsert.first << " , " << toInsert.second << "\n";
+	//integerArguments.insert(toInsert);
 	integerArguments.insert(std::make_pair(Lname, value));
 
 	ArgType type = integer;
@@ -128,6 +151,9 @@ void ArgumentList::add(const std::string& name, const MJArray& value)
 
 void ArgumentList::add(const std::string& name, const ArgumentList& value)
 {
+	//DEBUG
+	//std::cout << "\n ADD ARGUMENT LIST CALLED\n";
+	
 	std::string Lname = MakeLowerCase(name);
 	listArguments.insert(std::make_pair(Lname, value));
 
@@ -145,6 +171,8 @@ std::string ArgumentList::GetStringValue(const std::string& ArgumentName)
 
 	if (retrive == stringArguments.end())
 		throw("Impossible to find string argument " + ArgumentName + " in list" + ListName);
+	//DEBUG
+	//std::cout << "\nDEBUG: Retrived key " << retrive->first << " and value " << retrive->second << "\n";
 
 	MarkUsedArgument(name);
 	return retrive->second;
@@ -157,6 +185,8 @@ int ArgumentList::GetIntegerValue(const std::string& ArgumentName)
 
 	if (retrive == integerArguments.end())
 		throw("Impossible to find integer " + ArgumentName + " in list" + ListName);
+
+	//std::cout << "\nDEBUG: Retrived key " << retrive->first << " and value " << retrive->second << "\n";
 
 	MarkUsedArgument(name);
 	return retrive->second;
@@ -242,6 +272,7 @@ bool ArgumentList::GetIfPresent(const std::string& ArgumentName, int& Value)
 	if (isPresent(ArgumentName))
 	{
 		Value = GetIntegerValue(ArgumentName);
+		//std::cout << "\nDEBUG: Value (getIf) " << Value << std::endl;
 		return true;
 	}
 	else
