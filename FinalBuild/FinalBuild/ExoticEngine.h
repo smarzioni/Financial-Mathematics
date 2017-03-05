@@ -4,7 +4,7 @@
 #include "Wrapper.h"
 #include "Parameters.h"
 #include "MCStatistics.h"
-#include "PathDependent.h"
+#include "Options.h"
 #include <vector>
 
 /*This class is the basic engine for Monte Carlo Simulations. 

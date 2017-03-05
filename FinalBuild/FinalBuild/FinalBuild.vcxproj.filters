@@ -15,31 +15,43 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AntiThetic.cpp">
+    <ClCompile Include="ArgumentList.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="PayOffDefs.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="PayOff.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
     <ClCompile Include="Arrays.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="BlackScholesFormulas.cpp">
+    <ClCompile Include="FactoryRegistrations.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="PayOffInputs.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="Options.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionsInput.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="MAIN_Pricing_Securities.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="AntiThetic.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
     <ClCompile Include="ConvergenceTable.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
-    <ClCompile Include="DiscreteKnockDownOut.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
-    <ClCompile Include="DiscreteKnockUpOut.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
     <ClCompile Include="ExoticBSEngine.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
     <ClCompile Include="ExoticEngine.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
-    <ClCompile Include="GeometricAsian.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
     <ClCompile Include="MCStatistics.cpp">
@@ -54,66 +66,54 @@
     <ClCompile Include="ParkMiller.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="PathDependent.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
-    <ClCompile Include="PathDependentAsian.cpp">
+    <ClCompile Include="PiecewiseParameters.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
     <ClCompile Include="Random2.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="VanillaPathDependent.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
-    <ClCompile Include="Terminator.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
     <ClCompile Include="SeveralStatistics.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
-    <ClCompile Include="PiecewiseParameters.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
-    <ClCompile Include="ArgumentList.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
-    <ClCompile Include="PayOff.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
-    <ClCompile Include="MAIN_test_factory.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
-    <ClCompile Include="FactoryRegistrations.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AntiThetic.h">
+    <ClInclude Include="ArgumentList.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="Arrays.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
-    <ClInclude Include="BlackScholesFormulas.h">
+    <ClInclude Include="PayOff.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="PayOffDefs.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="ArgListFactory.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="ArgListFactoryHelper.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="PayOffInputs.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="Options.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionsInput.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="AntiThetic.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="ConvergenceTable.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="DiscreteKnockDownOut.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="DiscreteKnockUpOut.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="ExoticBSEngine.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="ExoticEngine.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="GeometricAsian.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="MCStatistics.h">
@@ -128,43 +128,16 @@
     <ClInclude Include="ParkMiller.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
-    <ClInclude Include="PathDependent.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="PathDependentAsian.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="PayOff3.h">
+    <ClInclude Include="PiecewiseParameters.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="Random2.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
-    <ClInclude Include="VanillaPathDependent.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="Wrapper.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="PiecewiseParameters.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
     <ClInclude Include="SeveralStatistics.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
-    <ClInclude Include="Terminator.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ArgumentList.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ArgListFactory.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ArgListFactoryHelper.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="PayOff.h">
+    <ClInclude Include="Wrapper.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
   </ItemGroup>

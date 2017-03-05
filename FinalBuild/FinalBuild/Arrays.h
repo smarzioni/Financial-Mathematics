@@ -7,7 +7,8 @@
 // with the definition of valrray from the standard library. 
 #ifndef MJARRAYS_H
 #define MJARRAYS_H
-
+#define RANGE_CHECKING
+#pragma warning(disable : 4996)
 #ifdef USE_VAL_ARRAY
 
 #include <valarray>

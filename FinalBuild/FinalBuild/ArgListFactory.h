@@ -21,12 +21,13 @@ class ArgListFactory
 public:
 	friend ArgListFactory<T>& FactoryInstance<>();
 	//friend and decleared outside of the class: this function has access to private parts
-	// of ArgListFactory<T> but it can be called outside an object
+	// of ArgListFactory<T> but it can be called outside an object. Defining it static and only
+	// inside the class should do the same
 
 	typedef T* (*CreateTFunction) (const ArgumentList&);
 	//CreateTFunction is the type a function pointer to functions of type 
 	// T* f(const ArgumentList&)
-	//A factory stores couples of keywords and such pointers
+	//A factory stores couples of keywords and such pointers to constructors of the derived  classes.
 
 	void RegisterClass(std::string ClassId, CreateTFunction);
 	//RegisterClass register the couble <ClassId, CreateTFunction> in the Factory.
@@ -35,6 +36,8 @@ public:
 	T* CreateT(ArgumentList args);
 	//this method returns a pointer to a newly initiated object of type T created in agreements
 	// with the arguments args
+
+	std::string GetKnownTypes();
 
 	~ArgListFactory() {};
 private:
@@ -45,6 +48,12 @@ private:
 	ArgListFactory& operator=  (const ArgListFactory&) {return *this}
 	//private Assignement overload
 };
+
+template<typename T>
+std::string ArgListFactory<T>::GetKnownTypes()
+{
+	return KnownTypes;
+}
 
 template<typename T>
 void ArgListFactory<T>::RegisterClass(std::string ClassId_, CreateTFunction Creator)
@@ -71,5 +80,6 @@ T* GetFromFactory(const ArgumentList& args)
 {
 	return FactoryInstance<T>().CreateT(args);
 }
+
 
 #endif //!ARG_LIST_FACTORY_H

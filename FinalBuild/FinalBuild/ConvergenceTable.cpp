@@ -1,7 +1,8 @@
 
 #include "ConvergenceTable.h"
 
-ConvergenceTable::ConvergenceTable(const Wrapper<StatisticsMC>& Inner_) : Inner(Inner_)
+ConvergenceTable::ConvergenceTable(const Wrapper<StatisticsMC>& Inner_) : Inner(Inner_),
+	StatisticsMC(Inner_->GetName() + " convergence table")
 {
 	StoppingPoint = 10;
 	PathsDone = 0;

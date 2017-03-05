@@ -2,6 +2,8 @@
 #define SEVERAL_STATISTICS_H
 
 #include <vector>
+#include <string>
+#include <sstream>
 #include "MCStatistics.h"
 #include "Wrapper.h"
 
@@ -19,9 +21,11 @@ public:
 	virtual void DumpOneResult(double result);
 	virtual std::vector<std::vector<double>> GetResultsSoFar() const;
 	virtual StatisticsMC* clone() const;
+	virtual std::ostringstream GetOutputStream() const;
 
 private:
 	std::vector<Wrapper<StatisticsMC>> Inners;
+	std::vector<std::string> Names;
 };
 
 #endif // !SEVERAL_STATISTICS_H

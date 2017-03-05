@@ -3,6 +3,7 @@
 #include <vector>
 #include <map>
 #include <string>
+#include "PayOff.h"
 #include "Arrays.h"
 
 std::string  MakeLowerCase(const std::string& input);
@@ -15,13 +16,19 @@ Each argument is of one type (between the types defined in ArgType);
 class ArgumentList
 {
 public:
+	//default Constructor
+	ArgumentList() {}
+
 	//constructor
 	ArgumentList(std::string name);
 	
+
+
 	//Arguments Types definition
 	enum ArgType
 	{
-		string, integer, floating, boolean, vectorDouble, mjarray, Alist
+		string, integer, floating, boolean, vectorDouble, mjarray, Alist,
+		payoff
 	};
 
 	//Populate the list - methods
@@ -32,6 +39,7 @@ public:
 	void add(const std::string& name, const std::vector<double>& value);
 	void add(const std::string& name, const MJArray& value);
 	void add(const std::string& name, const ArgumentList& value);
+	void add(const std::string& name, const PayOffBridge &value);
 
 	//Retrive elements - methods
 	std::string GetStringValue(const std::string& ArgumentName);
@@ -41,6 +49,7 @@ public:
 	std::vector<double> GetVectorDoubleValue(const std::string& ArgumentName);
 	MJArray GetMJArrayValue(const std::string& ArgumentName);
 	ArgumentList GetAlistValue(const std::string& ArgumentName);
+	PayOffBridge GetPayOffValue(const std::string& ArgumentName);
 
 	//Retrive optional arguments
 	bool GetIfPresent(const std::string& ArgumentName, std::string& Value);
@@ -50,13 +59,15 @@ public:
 	bool GetIfPresent(const std::string& ArgumentName, std::vector<double>& Value);
 	bool GetIfPresent(const std::string& ArgumentName, MJArray& Value);
 	bool GetIfPresent(const std::string& ArgumentName, ArgumentList& Value);
+	bool GetIfPresent(const std::string& ArgumentName, PayOffBridge& Value);
 
 	//Public Utilities
 	bool isPresent(const std::string& ArgumentName) const;
 	bool isUsed(const std::string& ArgumentName) const;
 	void throwErrorIfUnused(const std::string& ErrorId) const;
 	std::string GetListName() const;
-	const std::vector<std::pair<std::string, ArgType>>& GetArgumentsNameAndType() const; //return ArgumentNames
+	const std::vector<std::pair<std::string, ArgType>>& GetArgumentsNameAndType() const; 
+	//return ArgumentNames
 	
 	
 
@@ -88,6 +99,7 @@ private:
 	std::map<std::string, bool> booleanArguments;
 	std::map<std::string, std::vector<double>> vectorDoubleArguments;
 	std::map<std::string, MJArray> mjarrayArguments;
+	std::map<std::string, PayOffBridge> PayOffArguments;
 };
 
 

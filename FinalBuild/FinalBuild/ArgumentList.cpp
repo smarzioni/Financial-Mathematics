@@ -163,6 +163,17 @@ void ArgumentList::add(const std::string& name, const ArgumentList& value)
 	ArgType type = Alist;
 	RegisterName(Lname, type);
 }
+
+
+void ArgumentList::add(const std::string& name, const PayOffBridge &value)
+{
+
+	std::string Lname = MakeLowerCase(name);
+	PayOffArguments.insert(std::make_pair(Lname, value));
+
+	ArgType type = payoff;
+	RegisterName(Lname, type);
+}
 ///////////////////////////////////////////////////////////////////////
 
 //Retrive Methods definition
@@ -256,6 +267,18 @@ ArgumentList ArgumentList::GetAlistValue(const std::string& ArgumentName)
 	return retrive->second;
 }
 
+PayOffBridge ArgumentList::GetPayOffValue(const std::string& ArgumentName)
+{
+	std::string name = MakeLowerCase(ArgumentName);
+	std::map<const std::string, PayOffBridge>::const_iterator retrive = PayOffArguments.find(name);
+
+	if (retrive == PayOffArguments.end())
+		throw("Impossible to find PayOff  " + ArgumentName + " in parent list" + ListName);
+
+	MarkUsedArgument(name);
+	return retrive->second;
+}
+
 ///////////////////////////////////////////////////////////////////////
 //GET IF PRESENT DEFINITIONS
 
@@ -331,6 +354,17 @@ bool ArgumentList::GetIfPresent(const std::string& ArgumentName, ArgumentList& V
 	if (isPresent(ArgumentName))
 	{
 		Value = GetAlistValue(ArgumentName);
+		return true;
+	}
+	else
+		return false;
+}
+
+bool ArgumentList::GetIfPresent(const std::string& ArgumentName, PayOffBridge& Value)
+{
+	if (isPresent(ArgumentName))
+	{
+		Value = GetPayOffValue(ArgumentName);
 		return true;
 	}
 	else

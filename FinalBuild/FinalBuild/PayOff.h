@@ -2,8 +2,6 @@
 #ifndef PAYOFF_H
 #define PAYOFF_H
 
-#include "ArgumentList.h"
-#include "ArgListFactory.h"
 #include "Wrapper.h"
 
 
@@ -21,7 +19,7 @@ class PayOff
 public:
 	PayOff() {};
 
-	virtual double operator()(double Spot) const = 0;
+	virtual double operator()(double Spot) const =0;
 	virtual ~PayOff() {} //virtual destructor
 	virtual PayOff* clone() const = 0;
 private:
@@ -47,88 +45,14 @@ private:
 	PayOff* ThePayOffPtr;
 };
 
-inline double PayOffBridge::operator()(double Spot) const
+//using PayOffPtr = PayOffBridge*;
+
+inline double PayOffBridge::operator()  (double Spot) const
 {
 	return ThePayOffPtr->operator()(Spot);
 }
 
 
-class PayOffCall : public PayOff //inherit the interface of the class PayOff
-{
-public:
-	PayOffCall(ArgumentList args);
-
-	virtual double operator()(double Spot) const;
-	virtual ~PayOffCall() {}
-	virtual PayOff* clone() const;
-
-private:
-	double Strike;
-};
-
-class PayOffPut : public PayOff
-{
-public:
-	PayOffPut(ArgumentList args);
-	virtual double operator()(double Spot) const;
-	virtual ~PayOffPut() {}
-	virtual PayOff* clone() const;
-
-private:
-	double Strike;
-};
-
-class PayOffSpread : public PayOff
-{
-public:
-	PayOffSpread(ArgumentList args);
-	virtual double operator() (double Spot) const;
-	virtual ~PayOffSpread() {}
-	virtual PayOff* clone() const;
-
-private:
-	Wrapper<PayOff> payoff1;
-	Wrapper<PayOff> payoff2;
-	double Volume1;
-	double Volume2;
-};
-
-class PayOffDoubleDigital : public PayOff
-{
-public:
-	PayOffDoubleDigital(ArgumentList args);
-	virtual double operator()(double Spot) const;
-	virtual PayOff* clone() const;
-	virtual ~PayOffDoubleDigital() {}
-
-private:
-	double LowerLevel;
-	double UpperLevel;
-};
-
-class PayOffDigitalCall : public PayOff
-{
-public:
-	PayOffDigitalCall(ArgumentList args);
-	virtual double operator()(double Spot) const;
-	virtual PayOff* clone() const;
-	virtual ~PayOffDigitalCall() {}
-
-private:
-	double Strike;
-};
-
-class PayOffDigitalPut : public PayOff
-{
-public:
-	PayOffDigitalPut(ArgumentList args);
-	virtual double operator()(double Spot) const;
-	virtual PayOff* clone() const;
-	virtual ~PayOffDigitalPut() {}
-
-private:
-	double Strike;
-};
 
 #endif
 

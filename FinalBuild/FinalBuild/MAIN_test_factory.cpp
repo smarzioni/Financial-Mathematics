@@ -1,10 +1,11 @@
 //Taken from Joshi's C++ Design Patterns..
-//Requires PayOff3.cpp
+//Requires PayOff.cpp
 //		   PayOffBridge.cpp
-//		   PayOffFactory.cpp
+//		   ArgumentList.cpp
 //		   PayOffRegistration.cpp
 
 #include "PayOff.h"
+#include "PayOffInputs.h"
 #include "ArgListFactoryHelper.h"
 #include "ArgListFactory.h"
 #include "ArgumentList.h"
@@ -20,19 +21,23 @@ int main()
 	double Spot;
 	string optionType;
 
-
-	cout << "\nEnter strike price\n";
-	cin >> Strike;
-
-	cout << "\nEnter option Type name (\"call\" or \"put\") \n";
+	ArgumentList InputArg("payoff-input");
+	cout << "\nEnter PayOff type. Choose between \n" 
+		<< FactoryInstance<POInputs>().GetKnownTypes();
 	cin >> optionType;
+	InputArg.add("name", optionType);
+
+	POInputs* POInputsPtr = FactoryInstance<POInputs>().CreateT(InputArg);
+	ArgumentList args("payoff");
+	if (POInputsPtr != NULL)
+	{
+		args = POInputsPtr->operator()();
+		delete POInputsPtr;
+	}
 
 	cout << "\nEnter spot price at expiration\n";
 	cin >> Spot;
 
-	ArgumentList args("payoff");
-	args.add("name", optionType);
-	args.add("strike", Strike);
 
 	PayOff* PayOffPtr = FactoryInstance<PayOff>().CreateT(args);
 	if (PayOffPtr != NULL)
@@ -40,6 +45,7 @@ int main()
 		cout << "\n" << PayOffPtr->operator()(Spot) << "\n";
 		delete PayOffPtr;
 	}
+	else throw("NULLPTR at PayOff");
 
 	int temp;
 	cout << "\nType something and press enter to quit\n";
